@@ -3,7 +3,7 @@ import QtQuick.Window 2.12
 import OSGQMLItem 1.0
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.13
-import QtQuick.Dialogs 1.1
+import QtQuick.Dialogs
 
 Window {
     id:mWindow
@@ -67,7 +67,7 @@ Window {
     FileDialog {
         id: fileDialog
         title: "Please choose a model"
-        folder: "/home/client110/Documents/projects/hooshan/QTMAP3D/source/map3d/data/models"
+//        folder: "/home/client110/Documents/projects/hooshan/QTMAP3D/source/map3d/data/models"
         onAccepted: {
             txtInput.text = fileDialog.fileUrl.toString()
             osgItem.source = fileDialog.fileUrl
