@@ -11,7 +11,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 COMPONENTS Core Quick REQUIRED)
+find_package(Qt6 COMPONENTS Core Quick REQUIRED)
 
 add_executable(OSGQMLItem
     main.cpp
@@ -21,7 +21,7 @@ add_executable(OSGQMLItem
     tree.osgb)
 
 target_link_libraries(OSGQMLItem
-  PRIVATE Qt5::Core Qt5::Quick
+  PRIVATE Qt6::Core Qt6::Quick
   PUBLIC osg osgViewer osgDB osgGA OpenThreads osgManipulator osgSim osgParticle osgText osgUtil
   gdal)
 
