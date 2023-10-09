@@ -1,4 +1,5 @@
 #include "osgRenderNode.h"
+#include "qquickopenglutils.h"
 #include <QScreen>
 #include <QOpenGLContext>
 #include <QOpenGLFunctions>
@@ -41,7 +42,8 @@ void OSGRenderNode::releaseResources()
 void OSGRenderNode::render(const RenderState *state)
 {
     if(mOSGItem) {
-        mOSGItem->window()->resetOpenGLState();
+
+        QQuickOpenGLUtils::resetOpenGLState();
 
 //        if (!mGLFunctions) {
 //            mGLFunctions = new QOpenGLFunctions_2_0;
@@ -61,8 +63,6 @@ void OSGRenderNode::render(const RenderState *state)
 
 
         frame();
-
-
 //        QMatrix4x4 mat = (*state->projectionMatrix()) * (*matrix());
 
 
@@ -100,6 +100,7 @@ void OSGRenderNode::render(const RenderState *state)
 
 //        mOSGItem->window()->resetOpenGLState();
 
+        QQuickOpenGLUtils::resetOpenGLState();
     }
 }
 
