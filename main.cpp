@@ -4,6 +4,7 @@
 
 int main(int argc, char *argv[])
 {
+        qputenv("QSG_RENDER_LOOP", "basic");
     qmlRegisterType<OSGItem>("OSGQMLItem",1,0,"OSGItem");
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 

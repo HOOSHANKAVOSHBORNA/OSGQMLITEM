@@ -69,8 +69,8 @@ Window {
         title: "Please choose a model"
 //        folder: "/home/client110/Documents/projects/hooshan/QTMAP3D/source/map3d/data/models"
         onAccepted: {
-            txtInput.text = fileDialog.fileUrl.toString()
-            osgItem.source = fileDialog.fileUrl
+            txtInput.text = fileDialog.currentFile.toString()
+            osgItem.source = fileDialog.currentFile.toString()
         }
         onRejected: {
             console.log("Canceled")
